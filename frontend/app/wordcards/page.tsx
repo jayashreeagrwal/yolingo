@@ -5,12 +5,12 @@ import { Navbar } from "@/components/navbar"
 import { BookOpenIcon } from "lucide-react"
 
 const collections = [
-  { id: "alphabet", title: "Alphabet", count: 26, image: "/placeholder.svg?height=200&width=300" },
-  { id: "numbers", title: "Numbers", count: 20, image: "/placeholder.svg?height=200&width=300" },
-  { id: "greetings", title: "Greetings", count: 15, image: "/placeholder.svg?height=200&width=300" },
-  { id: "family", title: "Family", count: 12, image: "/placeholder.svg?height=200&width=300" },
-  { id: "colors", title: "Colors", count: 10, image: "/placeholder.svg?height=200&width=300" },
-  { id: "food", title: "Food", count: 18, image: "/placeholder.svg?height=200&width=300" },
+  { id: "alphabet", title: "Alphabet", count: 26, image: "/alphabet.jpeg" },
+  { id: "numbers", title: "Numbers", count: 20, image: "/numbers.jpeg" },
+  { id: "animals", title: "Animals", count: 5, image: "/animals.jpeg" },
+  { id: "family", title: "Family", count: 12, image: "/family.jpeg" },
+  { id: "colors", title: "Colors", count: 10, image: "/colors.jpeg" },
+  { id: "food", title: "Food", count: 18, image: "/food.jpeg" },
 ]
 
 export default function WordcardsPage() {
@@ -36,7 +36,7 @@ export default function WordcardsPage() {
                     className="object-cover group-hover:border-blue-500 border-primary border-b-2"
                   />
                 </div>
-                <CardContent className="p-4 bg-gradient-to-r from-primary/10 to-secondary">
+                <CardContent className="p-4">
                   <div className="flex items-center justify-between">
                     <h2 className="text-xl font-semibold">{collection.title}</h2>
                     <div className="bg-primary/20 text-primary font-medium text-sm px-2 py-1 rounded-full">

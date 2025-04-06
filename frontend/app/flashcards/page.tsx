@@ -10,34 +10,34 @@ import { ChevronLeft, ChevronRight, RotateCw } from "lucide-react"
 // Mock data - in a real app, this would come from an API or database
 const flashcards = [
   {
-    id: 1,
-    title: "Hello",
-    frontImage: "/placeholder.svg?height=400&width=300",
-    backImage: "/placeholder.svg?height=400&width=300",
+    id: 4,
+    title: "Cat",
+    frontImage: "/cat.jpeg",
+    backImage: "/cat.mp4",
   },
   {
     id: 2,
-    title: "Thank You",
-    frontImage: "/placeholder.svg?height=400&width=300",
-    backImage: "/placeholder.svg?height=400&width=300",
+    title: "Dog",
+    frontImage: "/dog.jpeg",
+    backImage: "/dog.mp4",
+  },
+  {
+    id: 1,
+    title: "Cow",
+    frontImage: "/cow.jpeg",
+    backImage: "/cow.mp4",
   },
   {
     id: 3,
-    title: "Please",
-    frontImage: "/placeholder.svg?height=400&width=300",
-    backImage: "/placeholder.svg?height=400&width=300",
-  },
-  {
-    id: 4,
-    title: "Sorry",
-    frontImage: "/placeholder.svg?height=400&width=300",
-    backImage: "/placeholder.svg?height=400&width=300",
+    title: "Bird",
+    frontImage: "/bird.jpeg",
+    backImage: "/bird.mp4",
   },
   {
     id: 5,
-    title: "Yes",
-    frontImage: "/placeholder.svg?height=400&width=300",
-    backImage: "/placeholder.svg?height=400&width=300",
+    title: "Fish",
+    frontImage: "/fish.jpeg",
+    backImage: "/fish.mp4",
   },
   {
     id: 6,
@@ -107,12 +107,12 @@ export default function FlashcardsPage() {
               <div className="absolute h-full w-full backface-hidden rotate-y-180">
                 <Card className="h-full w-full shadow-lg border-2 border-primary/20 overflow-hidden">
                   <div className="relative h-[350px] w-full">
-                    <Image
-                      src={currentCard.backImage || "/placeholder.svg"}
-                      alt={`${currentCard.title} (alternate view)`}
-                      fill
-                      className="object-contain"
-                    />
+                     <video
+                    src={currentCard.backImage || "/placeholder.svg"}
+                    controls
+                    className="object-contain w-full h-full rounded-lg"
+                    
+                  />
                   </div>
                   <div className="p-4 text-center bg-gradient-to-r from-secondary to-primary/10">
                     <h2 className="text-xl font-semibold">{currentCard.title}</h2>

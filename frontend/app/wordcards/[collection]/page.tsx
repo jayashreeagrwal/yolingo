@@ -58,28 +58,39 @@ const collections = {
       // More cards would be here
     ],
   },
-  greetings: {
-    title: "Greetings",
+  animals: {
+    title: "Animals",
     cards: [
       {
-        id: "hello",
-        title: "Hello",
-        image1: "/placeholder.svg?height=300&width=300",
-        image2: "/placeholder.svg?height=300&width=300",
+        id: "cat",
+        title: "Cat",
+        image1: "/cat.jpg",
+        image2: "/cat.mp4",
       },
       {
-        id: "goodbye",
-        title: "Goodbye",
-        image1: "/placeholder.svg?height=300&width=300",
-        image2: "/placeholder.svg?height=300&width=300",
+        id: "dog",
+        title: "Dog",
+        image1: "/dog.jpg",
+        image2: "/dog.mp4",
       },
       {
-        id: "thankyou",
-        title: "Thank You",
-        image1: "/placeholder.svg?height=300&width=300",
-        image2: "/placeholder.svg?height=300&width=300",
+        id: "cow",
+        title: "Cow",
+        image1: "/cow.jpg",
+        image2: "/cow.mp4",
       },
-      // More cards would be here
+      {
+        id: "fish",
+        title: "Fish",
+        image1: "/fish.jpg",
+        image2: "/fish.jpg",
+      },
+      {
+        id: "bird",
+        title: "Bird",
+        image1: "/bird.jpg",
+        image2: "/bird.jpg",
+      }
     ],
   },
   family: {
@@ -209,11 +220,11 @@ export default function CollectionPage({ params }: { params: { collection: strin
                   />
                 </div>
                 <div className="relative aspect-square bg-white rounded-lg p-2">
-                  <Image
+                  <video
                     src={currentCard.image2 || "/placeholder.svg"}
-                    alt={`${currentCard.title} - View 2`}
-                    fill
-                    className="object-contain"
+                    controls
+                    className="object-contain w-full h-full rounded-lg"
+                    
                   />
                 </div>
               </div>

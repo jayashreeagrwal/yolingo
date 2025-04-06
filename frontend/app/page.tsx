@@ -83,7 +83,7 @@ export default function LandingPage() {
                 <p className="mt-2 text-muted-foreground">Visual collections of ASL signs</p>
                 <div className="mt-6 relative h-32 rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=150&width=250"
+                    src="/wordcards.jpg"
                     alt="Wordcards preview"
                     fill
                     className="object-cover"
@@ -104,7 +104,7 @@ export default function LandingPage() {
                 <p className="mt-2 text-muted-foreground">Interactive flip cards for learning</p>
                 <div className="mt-6 relative h-32 rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=150&width=250"
+                    src="/flashcards.jpg"
                     alt="Flashcards preview"
                     fill
                     className="object-cover"
@@ -124,7 +124,7 @@ export default function LandingPage() {
                 <h3 className="text-xl font-bold">Daily Quiz</h3>
                 <p className="mt-2 text-muted-foreground">Test your ASL knowledge daily</p>
                 <div className="mt-6 relative h-32 rounded-lg overflow-hidden">
-                  <Image src="/placeholder.svg?height=150&width=250" alt="Quiz preview" fill className="object-cover" />
+                  <Image src="/quiz.jpg" alt="Quiz preview" fill className="object-cover" />
                 </div>
                 <Button variant="link" className="mt-4 text-purple-500" asChild>
                   <Link href="/quiz">Take Quiz</Link>

@@ -7,24 +7,23 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Navbar } from "@/components/navbar"
 import { CheckCircle, XCircle, Trophy } from "lucide-react"
 
-// Mock quiz data - in a real app, this would come from an API or database
 const quizQuestions = [
   {
     id: 1,
-    questionImage: "/placeholder.svg?height=300&width=300",
+    questionImage: "/dog.mp4",
     options: [
-      { id: 1, image: "/placeholder.svg?height=150&width=150", isCorrect: true },
-      { id: 2, image: "/placeholder.svg?height=150&width=150", isCorrect: false },
-      { id: 3, image: "/placeholder.svg?height=150&width=150", isCorrect: false },
+      { id: 1, image: "/dog.jpeg", isCorrect: true },
+      { id: 2, image: "/cat.jpeg", isCorrect: false },
+      { id: 3, image: "/bird.jpeg", isCorrect: false },
     ],
   },
   {
     id: 2,
-    questionImage: "/placeholder.svg?height=300&width=300",
+    questionImage: "/cat.mp4",
     options: [
-      { id: 1, image: "/placeholder.svg?height=150&width=150", isCorrect: false },
-      { id: 2, image: "/placeholder.svg?height=150&width=150", isCorrect: true },
-      { id: 3, image: "/placeholder.svg?height=150&width=150", isCorrect: false },
+      { id: 1, image: "/dog.jpeg", isCorrect: false },
+      { id: 2, image: "/cat.jpeg", isCorrect: true },
+      { id: 3, image: "/cow.jpeg", isCorrect: false },
     ],
   },
   {
@@ -119,7 +118,7 @@ export default function QuizPage() {
   const currentQuestion = dailyQuestions[currentQuestionIndex]
 
   const handleOptionSelect = (optionId: number) => {
-    if (selectedOptionId !== null) return // Prevent changing answer after selection
+    if (selectedOptionId !== null) return
 
     setSelectedOptionId(optionId)
     const selectedOption = currentQuestion.options.find((option) => option.id === optionId)
@@ -203,11 +202,10 @@ export default function QuizPage() {
             <Card className="mb-6 overflow-hidden border-none shadow-lg">
               <div className="bg-gradient-to-r from-primary/10 to-secondary p-6">
                 <div className="relative aspect-square max-w-xs mx-auto">
-                  <Image
+                   <video
                     src={currentQuestion.questionImage || "/placeholder.svg"}
-                    alt="ASL Sign"
-                    fill
-                    className="object-contain"
+                    controls
+                    className="object-contain w-full h-full rounded-lg"
                   />
                 </div>
               </div>
